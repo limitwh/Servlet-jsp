@@ -1,0 +1,46 @@
+/**
+ * Created by mliu3 on 2016/2/26.
+ */
+function checkUserName(userName){
+    if(userName.length<3||userName.length>10){
+        document.getElementById("username").focus();
+        document.getElementById("UserNameErrMSG").innerHTML="<font color='red' size='2'>User name between 3-10 byte!</font>";
+        return false;
+    }
+    if(isSpace(userName)){
+        document.getElementById("username").focus();
+        document.getElementById("UserNameErrMSG").innerHTML="<font color='red' size='2'>No space in user name!</font>";
+        return false;
+    }
+    if(isNumOrChar(userName)){
+        //form.username.onfocus();
+        document.getElementById("UserNameErrMSG").innerHTML="<font color='red' size='2'>User name must use number or char!</font>";
+        return false;
+    }
+    //document.getElementById("UserNameErrMSG").innerHTML="<font color='red' size='2'>User Name not empty!</font>";
+}
+
+function checkPSWName(){
+    //document.getElementById("UserPSWErrMSG").innerHTML="<font color='red'>Password not empty!</font>";
+}
+
+function isSpace(string){
+    var spacechar=' \t\n\r';
+    var i,c;
+    for(i=0;i< string.length;i++){
+        c = string.charAt(i);
+        if(spacechar.indexOf(c)>=0){
+            return true;
+        }
+    }
+    return false;
+}
+
+function isNumOrChar(str){
+    var re=/^[0-9a-z][\w-.]*[0-9a-z]$/i;
+    if(re.test(str)){
+        return true;
+    }else{
+        return false;
+    }
+}

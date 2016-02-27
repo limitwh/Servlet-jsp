@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="Servlet-jsp:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Servlet_jsp_war_exploded</output-path>
+    <root id="archive" name="Servlet-jsp_war exploded.war">
+      <element id="javaee-facet-resources" facet="Servlet-jsp/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Servlet-jsp" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="javax.mail" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.34-bin" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
