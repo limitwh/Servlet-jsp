@@ -1,5 +1,3 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
     <title>Login</title>
@@ -7,22 +5,22 @@
     <script type="text/javascript" src="./JS/LoginCheck.js"></script>
 </head>
 <body>
-<form id="login" name="login" method="post" action="Login">
+<form id="login" name="login" method="post" action="Login" onclick="submitCheck()">
     <table width="600" border="0">
         <tr>
             <td width="92">User Name</td>
-            <td width="94"><input id="username" name="username" type="text" id=username maxlength="10" onblur="checkUserName(this.value.toLowerCase())"/>
+            <td width="94"><input id="username" name="username" maxlength="10" onblur="checkUserName(this.value.toLowerCase())"/>
                 <span id="UserNameErrMSG"></span>
             </td>
         </tr>
         <tr>
             <td width="92">Password</td>
-            <td width="94"><input type="password" name="psw" type="text" id=psw maxlength="10" onblur="checkPSWName()"/>
+            <td width="94"><input type="password" name="psw" maxlength="10" onblur="checkPSW(this.value.toLowerCase())"/>
                 <span id="UserPSWErrMSG"></span>
             </td>
         </tr>
     </table>
-    <input type="submit" value="Login"> <a href="Register.html" onSubmit="return ">User register</a>
+    <input type="submit" value="Login"> <a href="Register.html" onSubmit="return">User register</a>
 </form>
 </body>
 </html>
