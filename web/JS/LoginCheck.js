@@ -85,9 +85,9 @@ function isNumOrChar(str){
 }
 
 function submitCheck(){
-    if((document.getElementById("UserNameErrMSG").innerHTML.length === 0)&&(document.getElementById("UserPSWErrMSG").innerHTML.length === 0)){
+    /*if((document.getElementById("UserNameErrMSG").innerHTML.length === 0)&&(document.getElementById("UserPSWErrMSG").innerHTML.length === 0)){
         alert("all go!");
     }else{
         alert("error!");
-    }
+    }*/
 }
